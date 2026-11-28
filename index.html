@@ -23,5 +23,24 @@
     <p>Electronics and Communication Engineering student interested in electronics, embedded systems, and software. I enjoy learning, building, and turning ideas into practical solutions.</p>
     <footer>KERALA, INDIA</footer>
   </main>
+
+  <script>
+    (() => {
+      const endpoint = "https://script.google.com/macros/s/AKfycbz3-sZ0yyCbSz46wdaQ0UbKm3AFGMtII6mwe_1C9jUo82JVPZ_OkrZMh6pJ4HLaFO4uuw/exec";
+
+      const visit = {
+        page: window.location.pathname || "/",
+        referrer: document.referrer || "Direct"
+      };
+
+      fetch(endpoint, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(visit),
+        keepalive: true
+      }).catch(() => {});
+    })();
+  </script>
 </body>
 </html>
